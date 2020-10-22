@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Places-->
         <scene sceneID="jQ2-d3-R7D">
             <objects>
                 <tableViewController id="dxz-KH-piX" customClass="MainViewController" customModule="myPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="dxz-KH-piX" id="jFX-8e-eS9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="saA-Vd-3bg"/>
+                    <navigationItem key="navigationItem" title="My Places" id="saA-Vd-3bg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mX1-D5-gC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +43,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r3q-zs-shT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="dxz-KH-piX" kind="relationship" relationship="rootViewController" id="vb8-Il-SlE"/>
