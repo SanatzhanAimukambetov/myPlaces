@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="My Places" id="saA-Vd-3bg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0fR-8p-6jx">
                             <connections>
-                                <segue destination="8gC-Lb-5iV" kind="presentation" modalTransitionStyle="crossDissolve" id="A6d-ng-dB9"/>
+                                <segue destination="8gC-Lb-5iV" kind="presentation" modalTransitionStyle="coverVertical" id="A6d-ng-dB9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,7 +199,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="75" id="DRg-UX-8s6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="DRg-UX-8s6">
                                         <rect key="frame" x="0.0" y="428" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DRg-UX-8s6" id="by9-Ib-XY2">
