@@ -24,6 +24,10 @@ class NewPlace: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
+            
+            let cameraIcon = #imageLiteral(resourceName: "camera")
+            let photoIcon = #imageLiteral(resourceName: "photo")
+            
             let actionSheet = UIAlertController(title: nil,
                                                                     message: nil,
                                                                     preferredStyle: .actionSheet)
@@ -31,15 +35,19 @@ class NewPlace: UITableViewController {
             let camera = UIAlertAction(title: "Camera", style: .default) { _ in
                 self.chooseImagePicker(source: .camera)
             }
+            camera.setValue(cameraIcon, forKey: "image")
+            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
-            let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+            let gallery = UIAlertAction(title: "Gallery", style: .default) { _ in
                 self.chooseImagePicker(source: .photoLibrary)
             }
+            gallery.setValue(photoIcon, forKey: "image")
+            gallery.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             actionSheet.addAction(camera)
-            actionSheet.addAction(photo)
+            actionSheet.addAction(gallery)
             actionSheet.addAction(cancel)
             
             present(actionSheet, animated: true)
