@@ -9,8 +9,13 @@ import UIKit
 
 class NewPlace: UITableViewController {
 
-    @IBOutlet var imageOfPlace: UIImageView!
+    @IBOutlet var saveButton: UIBarButtonItem!
     
+    @IBOutlet var placeImage: UIImageView!
+    @IBOutlet var placeName: UITextField!
+    @IBOutlet var placeLocation: UITextField!
+    @IBOutlet var placeType: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,9 +93,9 @@ extension NewPlace: UIImagePickerControllerDelegate, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController,
                                                 didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        imageOfPlace.image = info[.editedImage] as? UIImage
-        imageOfPlace.contentMode = .scaleAspectFill
-        imageOfPlace.clipsToBounds = true
+        placeImage.image = info[.editedImage] as? UIImage
+        placeImage.contentMode = .scaleAspectFill
+        placeImage.clipsToBounds = true
         dismiss(animated: true)
     }
 }

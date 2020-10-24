@@ -256,7 +256,11 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="45p-bb-hVT"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="0Db-3X-nB1" id="4gj-r1-SNY"/>
+                        <outlet property="placeImage" destination="0Db-3X-nB1" id="4gj-r1-SNY"/>
+                        <outlet property="placeLocation" destination="HCU-WQ-iKc" id="OW6-HG-bye"/>
+                        <outlet property="placeName" destination="Yrl-dB-gfW" id="eRl-cS-qTn"/>
+                        <outlet property="placeType" destination="oGD-2R-rqy" id="JuA-fr-oWj"/>
+                        <outlet property="saveButton" destination="45p-bb-hVT" id="cTZ-Hq-rfE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yc-Rf-Szd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
