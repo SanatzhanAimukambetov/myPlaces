@@ -11,6 +11,8 @@ class NewPlace: UITableViewController {
     
     var newPlace: Place?
     
+    var imageIsChanged = false
+    
     @IBOutlet var saveButton: UIBarButtonItem!
     
     @IBOutlet var placeImage: UIImageView!
@@ -67,10 +69,18 @@ class NewPlace: UITableViewController {
     
     func saveNewPlace() {
         
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = placeImage.image
+        } else {
+            image = #imageLiteral(resourceName: "imagePlaceholder")
+        }
+        
         newPlace = Place(name: placeName.text!,
                                       location: placeLocation.text,
                                       type: placeType.text,
-                                      image: placeImage.image,
+                                      image: image,
                                       restaurantImage: nil)
         
     }
@@ -124,6 +134,9 @@ extension NewPlace: UIImagePickerControllerDelegate, UINavigationControllerDeleg
         placeImage.image = info[.editedImage] as? UIImage
         placeImage.contentMode = .scaleAspectFill
         placeImage.clipsToBounds = true
+        
+        imageIsChanged = true
+        
         dismiss(animated: true)
     }
 }
