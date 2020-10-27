@@ -8,7 +8,9 @@
 import UIKit
 
 class NewPlace: UITableViewController {
-
+    
+    var newPlace: Place?
+    
     @IBOutlet var saveButton: UIBarButtonItem!
     
     @IBOutlet var placeImage: UIImageView!
@@ -19,11 +21,11 @@ class NewPlace: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        saveButton.isEnabled = false
-        /*
-        tableView.tableHeaderView = UIView()
-        */
         tableView.tableFooterView = UIView()
+        
+        saveButton.isEnabled = false
+        
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     // MARK: Table View Delegate
@@ -62,6 +64,16 @@ class NewPlace: UITableViewController {
             view.endEditing(true)
         }
     }
+    
+    func saveNewPlace() {
+        
+        newPlace = Place(name: placeName.text!,
+                                      location: placeLocation.text,
+                                      type: placeType.text,
+                                      image: placeImage.image,
+                                      restaurantImage: nil)
+        
+    }
 }
 
 // MARK: Text Field Delegate
@@ -73,6 +85,15 @@ extension NewPlace: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc private func textFieldChanged() {
+        
+        if placeName.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
 }
 
