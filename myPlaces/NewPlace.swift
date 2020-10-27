@@ -19,6 +19,7 @@ class NewPlace: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        saveButton.isEnabled = false
         /*
         tableView.tableHeaderView = UIView()
         */
