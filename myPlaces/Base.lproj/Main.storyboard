@@ -248,8 +248,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="WEZ-ud-Twk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aub-ba-u3M"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="45p-bb-hVT"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aub-ba-u3M">
+                            <connections>
+                                <action selector="cancelAction:" destination="VQz-KR-XAR" id="SKT-be-pjT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="45p-bb-hVT">
+                            <connections>
+                                <segue destination="j72-Mv-T2w" kind="unwind" unwindAction="unwindSegue:" id="0mn-6D-plr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="placeImage" destination="0Db-3X-nB1" id="4gj-r1-SNY"/>
@@ -260,6 +268,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yc-Rf-Szd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="j72-Mv-T2w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1244.9275362318842" y="-1.3392857142857142"/>
         </scene>

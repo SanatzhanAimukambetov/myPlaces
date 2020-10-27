@@ -27,7 +27,7 @@ class NewPlace: UITableViewController {
         
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
-    
+        
     // MARK: Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -74,6 +74,12 @@ class NewPlace: UITableViewController {
                                       restaurantImage: nil)
         
     }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        
+        dismiss(animated: true)
+    }
+    
 }
 
 // MARK: Text Field Delegate
