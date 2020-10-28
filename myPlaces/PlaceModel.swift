@@ -14,26 +14,11 @@ class Place: Object {
     @objc dynamic var type: String?
     @objc dynamic var imageData: Data?
     
-    let restaurantsNames = [
-        "Doner", "Пицца Блюз", "KFC", "Meiman",
-        "Sushimania", "Dodo Pizza", "barBQ", "Tulipark",
-        "Lanzhou", "Waffle house", "Appetite", "Дастархан",
-        "Crystal Detailing", "JOY VOSTOK", "Золотая Орда"
-    ]
-    
-    func savePlaces() {
-        
-        for place in restaurantsNames {
-            
-            let image = UIImage(named: place)
-            guard let imageData = image?.pngData() else { return }
-            
-            let newPlace = Place()
-            
-            newPlace.name = place
-            newPlace.location = "Oskemen"
-            newPlace.type = "Restaurant"
-            newPlace.imageData = imageData
-        }
+    convenience init(name: String, location: String?, type: String?, imageData: Data?) {
+        self.init()
+        self.name = name
+        self.location = location
+        self.type = type
+        self.imageData = imageData
     }
 }
