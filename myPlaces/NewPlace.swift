@@ -9,6 +9,7 @@ import UIKit
 
 class NewPlace: UITableViewController {
     
+    var currentPlace: Place?
     var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -24,6 +25,7 @@ class NewPlace: UITableViewController {
         tableView.tableFooterView = UIView()
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        setupEditScreen()
     }
         
     // MARK: Table View Delegate
@@ -81,6 +83,27 @@ class NewPlace: UITableViewController {
                              imageData: imageData)
        
         StorageManager.saveObject(newPlace)
+    }
+    
+    private func setupEditScreen() {
+        if currentPlace != nil {
+            
+            setupNavigationBar()
+            
+            guard let data = currentPlace?.imageData, let image = UIImage(data: data) else { return }
+            
+            placeImage.image = image
+            placeImage.contentMode = .scaleAspectFill
+            placeName.text = currentPlace?.name
+            placeLocation.text = currentPlace?.location
+            placeType.text = currentPlace?.type
+        }
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = nil
+        title = currentPlace?.name
+        saveButton.isEnabled = true
     }
     
     @IBAction func cancelAction(_ sender: Any) {

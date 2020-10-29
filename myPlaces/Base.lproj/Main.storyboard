@@ -77,6 +77,7 @@
                                     <outlet property="locationLabel" destination="myc-Dx-Ei4" id="Vb7-WU-5jU"/>
                                     <outlet property="nameLabel" destination="Ybe-OL-6id" id="PgQ-st-Msm"/>
                                     <outlet property="typeLabel" destination="pcO-C4-iPx" id="MtI-dA-ggw"/>
+                                    <segue destination="VQz-KR-XAR" kind="show" identifier="showDetail" id="8vx-Ak-9j8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -247,7 +248,7 @@
                             <outlet property="delegate" destination="VQz-KR-XAR" id="9gH-N2-kp5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WEZ-ud-Twk">
+                    <navigationItem key="navigationItem" title="New Place" id="WEZ-ud-Twk">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aub-ba-u3M">
                             <connections>
                                 <action selector="cancelAction:" destination="VQz-KR-XAR" id="SKT-be-pjT"/>
@@ -270,7 +271,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yc-Rf-Szd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="j72-Mv-T2w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="514" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mgh-d8-qOe">
@@ -307,9 +308,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkV-RR-3Sv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473.91304347826093" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="513" y="-740"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bUi-Mf-sBf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="systemBackgroundColor">
