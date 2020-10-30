@@ -194,9 +194,12 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1QK-gK-jgX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="9Rl-D4-Usm" eventType="valueChanged" id="l2x-ju-spg"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eYx-hA-95O">
                                 <rect key="frame" x="0.0" y="120" width="414" height="776"/>
@@ -286,7 +289,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="311-Qw-WbF">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="hhK-Xi-DBE"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="hhK-Xi-DBE">
+                            <connections>
+                                <action selector="reversedSorting:" destination="9Rl-D4-Usm" id="9Zd-mO-SDD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VSh-kP-Rsd">
                             <connections>
                                 <segue destination="8gC-Lb-5iV" kind="presentation" id="0gc-xU-Zue"/>
@@ -294,6 +301,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="hhK-Xi-DBE" id="fSy-q2-HX9"/>
+                        <outlet property="segmentedControl" destination="1QK-gK-jgX" id="Mfh-0a-bNG"/>
                         <outlet property="tableView" destination="eYx-hA-95O" id="LP8-0K-xc0"/>
                     </connections>
                 </viewController>
