@@ -157,7 +157,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-8h-bHd" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-8h-bHd" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
@@ -365,6 +365,11 @@
             <point key="canvasLocation" x="513" y="-740"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0bb-8h-bHd">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="smw-YD-uUT"/>
     </inferredMetricsTieBreakers>

@@ -11,6 +11,8 @@ import UIKit
     
     // MARK: Properties
     
+    var rating = 0
+    
     private var ratingButtons = [UIButton]()
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
@@ -23,9 +25,7 @@ import UIKit
             setupButtons()
         }
     }
-    
-    var rating = 0
-    
+
     // MARK: Initialization
     
     override  init(frame: CGRect) {
