@@ -157,13 +157,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-8h-bHd" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="107" y="15" width="200" height="110"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-8h-bHd" customClass="RatingControl" customModule="myPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0bb-8h-bHd" firstAttribute="centerX" secondItem="tOL-ZF-7oE" secondAttribute="centerX" id="8ji-c4-Hxw"/>
-                                                <constraint firstItem="0bb-8h-bHd" firstAttribute="centerY" secondItem="tOL-ZF-7oE" secondAttribute="centerY" id="9wB-fM-qf4"/>
+                                                <constraint firstItem="0bb-8h-bHd" firstAttribute="centerY" secondItem="tOL-ZF-7oE" secondAttribute="centerY" id="7eT-5h-CZy"/>
+                                                <constraint firstItem="0bb-8h-bHd" firstAttribute="centerX" secondItem="tOL-ZF-7oE" secondAttribute="centerX" id="ECJ-6X-t69"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
