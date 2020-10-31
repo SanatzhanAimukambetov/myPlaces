@@ -30,12 +30,25 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="0Db-3X-nB1">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iye-ye-JwV">
+                                                    <rect key="frame" x="344" y="189" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Ktc-yx-wWw"/>
+                                                        <constraint firstAttribute="width" constant="50" id="p3j-TA-Div"/>
+                                                    </constraints>
+                                                    <state key="normal" image="map"/>
+                                                    <connections>
+                                                        <segue destination="zTe-Ha-EQB" kind="presentation" identifier="showMap" modalPresentationStyle="fullScreen" id="Rax-h1-xFa"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="0Db-3X-nB1" secondAttribute="bottom" id="CrH-Sh-idH"/>
                                                 <constraint firstAttribute="trailing" secondItem="0Db-3X-nB1" secondAttribute="trailing" id="PPh-0L-O2l"/>
                                                 <constraint firstItem="0Db-3X-nB1" firstAttribute="top" secondItem="RFp-OG-sri" secondAttribute="top" id="WeD-qb-tKC"/>
+                                                <constraint firstItem="Iye-ye-JwV" firstAttribute="bottom" secondItem="RFp-OG-sri" secondAttribute="bottomMargin" id="d5W-k9-OZe"/>
+                                                <constraint firstItem="Iye-ye-JwV" firstAttribute="trailing" secondItem="RFp-OG-sri" secondAttribute="trailingMargin" id="dIt-rg-jVd"/>
                                                 <constraint firstItem="0Db-3X-nB1" firstAttribute="leading" secondItem="RFp-OG-sri" secondAttribute="leading" id="enK-te-JPd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -221,6 +234,49 @@
             </objects>
             <point key="canvasLocation" x="513.04347826086962" y="-1.3392857142857142"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="3Yl-7X-cy6">
+            <objects>
+                <viewController id="zTe-Ha-EQB" customClass="MapViewController" customModule="myPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4v-h0-Qp8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zKS-FK-8Ug">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dL-d7-rHG">
+                                <rect key="frame" x="344" y="84" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="78N-tb-xME"/>
+                                    <constraint firstAttribute="width" constant="30" id="dJ9-X7-tVW"/>
+                                </constraints>
+                                <state key="normal" image="camcel"/>
+                                <connections>
+                                    <action selector="closeVC" destination="zTe-Ha-EQB" eventType="touchUpInside" id="wBK-W9-kdp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Ie-iW-DB2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zKS-FK-8Ug" firstAttribute="leading" secondItem="0Ie-iW-DB2" secondAttribute="leading" id="5l5-GP-Vnb"/>
+                            <constraint firstItem="0Ie-iW-DB2" firstAttribute="trailing" secondItem="7dL-d7-rHG" secondAttribute="trailing" constant="40" id="J9e-T4-Kv6"/>
+                            <constraint firstItem="zKS-FK-8Ug" firstAttribute="trailing" secondItem="0Ie-iW-DB2" secondAttribute="trailing" id="NDK-z2-hfE"/>
+                            <constraint firstAttribute="bottom" secondItem="zKS-FK-8Ug" secondAttribute="bottom" id="cSe-OC-OjL"/>
+                            <constraint firstItem="7dL-d7-rHG" firstAttribute="top" secondItem="0Ie-iW-DB2" secondAttribute="top" constant="40" id="n9F-ZI-zPC"/>
+                            <constraint firstItem="zKS-FK-8Ug" firstAttribute="top" secondItem="V4v-h0-Qp8" secondAttribute="top" id="uWs-qS-bA7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nQK-Yu-Gcu"/>
+                    <connections>
+                        <outlet property="mapView" destination="zKS-FK-8Ug" id="XtU-ys-v1X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8F8-Dq-77o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259.4202898550725" y="-1.3392857142857142"/>
+        </scene>
         <!--My Places-->
         <scene sceneID="rcW-mq-MEr">
             <objects>
@@ -404,9 +460,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="0bb-8h-bHd">
-            <size key="intrinsicContentSize" width="252" height="44"/>
-        </designable>
         <designable name="d6h-bL-sS2">
             <size key="intrinsicContentSize" width="90" height="14"/>
         </designable>
@@ -420,8 +473,10 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="510" height="512"/>
         <image name="filledStar" width="475" height="476"/>
+        <image name="map" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

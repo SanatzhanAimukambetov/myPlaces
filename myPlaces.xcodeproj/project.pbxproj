@@ -17,8 +17,9 @@
 		E795315625407E23000D11B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E795315525407E23000D11B4 /* Assets.xcassets */; };
 		E795315925407E23000D11B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E795315725407E23000D11B4 /* LaunchScreen.storyboard */; };
 		E795316325414064000D11B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795316225414064000D11B4 /* MainViewController.swift */; };
+		E79BBBC0254DC7330085D926 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BBBBF254DC7330085D926 /* RatingControl.swift */; };
 		E7B7F6DB25495F650005C66B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7F6DA25495F650005C66B /* StorageManager.swift */; };
-		E7C3768E254C4CFB00988774 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3768D254C4CFB00988774 /* RatingControl.swift */; };
+		E7D18E2D254DBA3500D2E2CA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D18E2C254DBA3500D2E2CA /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		E795315825407E23000D11B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E795315A25407E23000D11B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E795316225414064000D11B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E79BBBBF254DC7330085D926 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E7B7F6DA25495F650005C66B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		E7C3768D254C4CFB00988774 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		E7D18E2C254DBA3500D2E2CA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +93,15 @@
 			isa = PBXGroup;
 			children = (
 				E795314C25407E20000D11B4 /* AppDelegate.swift */,
-				E795316225414064000D11B4 /* MainViewController.swift */,
 				E7002A582542EA3200AFB731 /* CustomTableViewCell.swift */,
-				E7C3768D254C4CFB00988774 /* RatingControl.swift */,
 				E7002A5C2542ED6300AFB731 /* PlaceModel.swift */,
-				E7B7F6DA25495F650005C66B /* StorageManager.swift */,
-				E795314E25407E20000D11B4 /* SceneDelegate.swift */,
-				E795315225407E20000D11B4 /* Main.storyboard */,
+				E795316225414064000D11B4 /* MainViewController.swift */,
 				E7002A5F2543353200AFB731 /* NewPlace.swift */,
+				E7D18E2C254DBA3500D2E2CA /* MapViewController.swift */,
+				E79BBBBF254DC7330085D926 /* RatingControl.swift */,
+				E795314E25407E20000D11B4 /* SceneDelegate.swift */,
+				E7B7F6DA25495F650005C66B /* StorageManager.swift */,
+				E795315225407E20000D11B4 /* Main.storyboard */,
 				E795315525407E23000D11B4 /* Assets.xcassets */,
 				E795315725407E23000D11B4 /* LaunchScreen.storyboard */,
 				E795315A25407E23000D11B4 /* Info.plist */,
@@ -224,9 +227,10 @@
 				E795314D25407E20000D11B4 /* AppDelegate.swift in Sources */,
 				E7002A602543353200AFB731 /* NewPlace.swift in Sources */,
 				E7B7F6DB25495F650005C66B /* StorageManager.swift in Sources */,
-				E7C3768E254C4CFB00988774 /* RatingControl.swift in Sources */,
+				E7D18E2D254DBA3500D2E2CA /* MapViewController.swift in Sources */,
 				E7002A5D2542ED6300AFB731 /* PlaceModel.swift in Sources */,
 				E7002A592542EA3200AFB731 /* CustomTableViewCell.swift in Sources */,
+				E79BBBC0254DC7330085D926 /* RatingControl.swift in Sources */,
 				E795314F25407E20000D11B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
