@@ -9,7 +9,7 @@ import UIKit
 
 class NewPlace: UITableViewController {
     
-    var currentPlace: Place?
+    var currentPlace: Place!
     var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -18,7 +18,8 @@ class NewPlace: UITableViewController {
     @IBOutlet var placeName: UITextField!
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
-
+    @IBOutlet var ratingControl: RatingControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,7 +84,8 @@ class NewPlace: UITableViewController {
         let newPlace = Place(name: placeName.text!,
                              location: placeLocation.text,
                              type: placeType.text,
-                             imageData: imageData)
+                             imageData: imageData,
+                             rating: Double(ratingControl.rating))
        
         if currentPlace != nil {
             try! realm.write {
@@ -91,6 +93,7 @@ class NewPlace: UITableViewController {
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
                 StorageManager.saveObject(newPlace)
@@ -110,6 +113,7 @@ class NewPlace: UITableViewController {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     
